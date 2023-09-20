@@ -23,8 +23,5 @@ adj = input("Adjetivo: ")
 verbo1 = input("verbo: ")
 verbo2 = input("verbo: ")
 sustantivo_plural = input("Sustantivo plural: ")
-
-
 madlib = f"¡Programar es tan {adj}! Siempre me emociona porque me encanta {verbo1} problemas.¡aprende a {verbo2} con Freecodecamp y alcanza tus {sustantivo_plural}!"
-
 print(madlib)
