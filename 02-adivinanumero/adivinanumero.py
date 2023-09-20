@@ -21,3 +21,7 @@ def adivina_el_numero(x):
 
     print(
         f"¡Felicitaciones Adivinaste el numero {numero_aleatorio} correctamente!")
+
+
+adivina_el_numero(10)
+# pendiente correcion en caso de que el jugador escriba letras o no escriba nada
