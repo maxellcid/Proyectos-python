@@ -3,7 +3,7 @@
 def input_altura():
     try:
         altura = float(input("ingresa tu estatura en metros: "))
-        return altura, print(altura)
+        return altura, print(f"la altura ingresada es:{altura} Metros")
     except ValueError: 
         print("Los valores ingresados no son números intentelo nuevamente.")
         return input_altura()
@@ -11,7 +11,7 @@ def input_altura():
 def input_peso():
     try:
         peso = float(input("ingresa tu peso en Kilogramos: "))
-        return peso, print(peso)
+        return peso, print(f"el peso ingreeado es de:{peso} Kilogramos")
     except ValueError: 
         print("Los valores ingresados no son números intentelo nuevamente.")
         return input_peso()
@@ -27,13 +27,9 @@ def ingreso_de_datos():
 
 def calcular_imc():
   altura , peso = ingreso_de_datos()
-  try:
-    indice_masa_corporal = round(((peso/pow(altura,2))),2)
-    mensaje_peso= get_mensaje_peso(indice_masa_corporal)
-    return indice_masa_corporal, mensaje_peso, 
-  except ValueError: 
-    print("Los valores ingresados no son números.")
-    return
+  indice_masa_corporal = round(((peso/pow(altura,2))),2)
+  mensaje_peso= get_mensaje_peso(indice_masa_corporal)
+  return indice_masa_corporal, mensaje_peso, 
 
 def get_mensaje_peso(indice_masa_corporal):
   """Genera un mensaje de acuerdo al valor arrojado por la variable indice_masa_corporal
